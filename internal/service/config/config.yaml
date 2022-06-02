@@ -1,0 +1,13 @@
+kafka:
+  brokers: [ "localhost:9092" ]
+  groupID: service_emitter
+  InitialOffset: -2 #sarama.OffsetOldest
+  TableReplication: 1
+  StreamReplication: 1
+kafkaTopics:
+  deposit:
+    topicName: deposits
+    partitions: 5
+  aboveThresholdTable:
+    topicName: aboveThreshold
+    partitions: 5

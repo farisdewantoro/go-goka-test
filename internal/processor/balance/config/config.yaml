@@ -1,0 +1,10 @@
+kafka:
+  brokers: [ "localhost:9092" ]
+  groupID: balance
+  InitialOffset: -2 #sarama.OffsetOldest
+  TableReplication: 1
+  StreamReplication: 1
+kafkaTopics:
+  deposit:
+    topicName: deposits
+    partitions: 5

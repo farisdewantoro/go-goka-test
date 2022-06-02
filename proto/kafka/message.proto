@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package kafkaMessages;
+import "google/protobuf/timestamp.proto";
+
+option go_package = "./;kafkaMessages";
+
+message Deposit {
+    int64 walletId = 1;
+    int64 amount = 2;
+    google.protobuf.Timestamp timestamp = 3;
+}
+
+message DepositList{
+    repeated Deposit deposits =1;
+}
+
+message AboveThreshold{
+    repeated Deposit deposits =1;
+    bool IsAboveThreshold = 2;
+}
